@@ -105,6 +105,7 @@ app.post('/insert_review', express.raw({ type: '*/*' }), async (req, res) => {
 	});
 
   try {
+    console.log(review);
     const savedReview = await review.save();
     res.json(savedReview);
   } catch (error) {
