@@ -31,11 +31,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "localhost",
-    'https://joshiqa01-8000.theiadockernext-1-labs-'\
+    'https://joshiqa01-8000.theiadockernext-1-labs-'
     'prod-theiak8s-4-tor01.proxy.cognitiveclass.ai',
 ]
 CSRF_TRUSTED_ORIGINS = [
-    'https://joshiqa01-8000.theiadockernext-1-labs-'\
+    'https://joshiqa01-8000.theiadockernext-1-labs-'
     'prod-theiak8s-4-tor01.proxy.cognitiveclass.ai'
 ]
 
@@ -101,19 +101,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": 
-        "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+        "NAME":
+        'django.contrib.auth.password_validation'
+        '.UserAttributeSimilarityValidator',
     },
     {
-        "NAME": 
+        "NAME":
         "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        "NAME": 
+        "NAME":
         "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        "NAME": 
+        "NAME":
         "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]

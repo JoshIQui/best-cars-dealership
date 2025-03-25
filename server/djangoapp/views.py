@@ -99,7 +99,8 @@ def get_cars(request):
     return JsonResponse({"CarModels": cars})
 
 
-# Update the `get_dealerships` render list of dealerships all by default, particular state if state is passed
+# Update the `get_dealerships` render list of dealerships
+# all by default, particular state if state is passed
 def get_dealerships(request, state="All"):
     if state == "All":
         endpoint = "/fetchDealers"
@@ -133,7 +134,7 @@ def get_dealer_details(request, dealer_id):
 
 
 def add_review(request):
-    if request.user.is_anonymous == False:
+    if request.user.is_anonymous is not False:
         data = json.loads(request.body)
         try:
             response = post_review(data)
